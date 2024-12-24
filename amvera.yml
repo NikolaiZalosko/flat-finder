@@ -9,5 +9,5 @@ build:
     build/libs/*.jar: /
 run:
   jarName: flat-finder-0.0.1-SNAPSHOT.jar
-  persistenceMount: ~/data
+  persistenceMount: ./build/data
   containerPort: 8081
