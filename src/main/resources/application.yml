@@ -35,5 +35,5 @@ client:
 
 telegram:
     bot:
-        token: ${TELEGRAM_FLAT_FINDER_BOT_TOKEN}
-    chatId: ${TELEGRAM_CHAT_ID}
+        token: ${TELEGRAM_FLAT_FINDER_BOT_TOKEN:token_placeholder}
+    chatId: ${TELEGRAM_CHAT_ID:chat_id_placeholder}
