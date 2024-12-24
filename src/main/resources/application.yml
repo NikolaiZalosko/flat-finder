@@ -14,6 +14,12 @@ spring:
         hibernate:
             ddl-auto: none
 
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+
 client:
     onliner:
         host: https://r.onliner.by/sdapi/ak.api
