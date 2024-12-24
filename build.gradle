@@ -13,6 +13,10 @@ java {
 	}
 }
 
+jar {
+    enabled = true
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
