@@ -1,0 +1,13 @@
+---
+meta:
+  environment: jvm
+  toolchain:
+    name: gradle
+    version: 17
+build:
+  artifacts:
+    build/libs/*.jar: /
+run:
+  jarName: flat-finder-0.0.1-SNAPSHOT.jar
+  persistenceMount: /db
+  containerPort: 8081
