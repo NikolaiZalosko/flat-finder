@@ -1,6 +1,6 @@
 # Flat finder
 
-Telegram bot that finds apartmets for rent.
+Telegram bot that finds apartments for rent.
 
 ## Requirements
 
