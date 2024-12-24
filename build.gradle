@@ -1,0 +1,83 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.0'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.nickz'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+    springCloudVersion = '2024.0.0'
+    lombokVersion = '1.18.36'
+    slf4jVersion = '2.0.16'
+    mapstructVersion = '1.5.5.Final'
+}
+
+dependencies {
+    /**
+     * Spring
+     */
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    /**
+     * DB
+     */
+    runtimeOnly 'com.h2database:h2'
+    //runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.flywaydb:flyway-core'
+    implementation 'org.flywaydb:flyway-database-postgresql'
+
+    /**
+     * Lombok
+     */
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    /**
+     * Mapstruct
+     */
+    implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+
+    /**
+     * Telegram
+     */
+    implementation group: 'org.telegram', name: 'telegrambots-spring-boot-starter', version: '6.9.7.1'
+    implementation group: 'org.telegram', name: 'telegrambots-abilities', version: '8.0.0'
+    implementation group: 'org.telegram', name: 'telegrambots-client', version: '8.0.0'
+
+    /**
+     * Testing
+     */
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+dependencyManagement {
+  imports {
+    mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+  }
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

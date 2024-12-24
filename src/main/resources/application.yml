@@ -1,0 +1,39 @@
+server:
+    port: 8081
+
+spring:
+    application:
+        name: Flat finder
+    datasource:
+        url: jdbc:h2:./build/db/flatfinder
+        username: sa
+        password: 12345678
+    h2:
+        console.enabled: true
+    jpa:
+        hibernate:
+            ddl-auto: none
+
+client:
+    onliner:
+        host: https://r.onliner.by/sdapi/ak.api
+        search: >
+            /search/apartments?
+            rent_type%5B%5D=2_rooms&
+            rent_type%5B%5D=3_rooms&
+            rent_type%5B%5D=4_rooms&
+            rent_type%5B%5D=5_rooms&
+            rent_type%5B%5D=6_rooms&
+            price%5Bmin%5D=200&
+            price%5Bmax%5D=700&
+            currency=usd&
+            only_owner=true&
+            bounds%5Blb%5D%5Blat%5D=53.92096581520953&
+            bounds%5Blb%5D%5Blong%5D=27.53402364917399&
+            bounds%5Brt%5D%5Blat%5D=53.946003721943214&
+            bounds%5Brt%5D%5Blong%5D=27.577625638920082&
+
+telegram:
+    bot:
+        token: ${TELEGRAM_FLAT_FINDER_BOT_TOKEN}
+    chatId: ${TELEGRAM_CHAT_ID}
