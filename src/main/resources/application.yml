@@ -5,7 +5,7 @@ spring:
     application:
         name: Flat finder
     datasource:
-        url: jdbc:h2:./build/data/db/flatfinder
+        url: jdbc:h2:./data/db/flatfinder
         username: sa
         password: 12345678
     h2:
