@@ -40,7 +40,7 @@ public class ApartmentServiceImpl implements ApartmentService {
                 kufarFeignClient.searchApartments().ads().stream()
                         .map(apartmentMapper::toEntity)
                         .toList();
-        log.info("Apartments found at Kufar: {}", apartmentsOnliner);
+        log.info("Apartments found at Kufar: {}", apartmentsKufar);
 
         apartmentFoundOnline.addAll(apartmentsOnliner);
         apartmentFoundOnline.addAll(apartmentsKufar);

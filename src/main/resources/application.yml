@@ -23,6 +23,7 @@ management:
 client:
     onliner:
         host: https://r.onliner.by/sdapi/ak.api
+        # TODO: remove folding
         search: >
             /search/apartments?
             rent_type%5B%5D=2_rooms&
