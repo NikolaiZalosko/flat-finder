@@ -37,7 +37,10 @@ client:
             bounds%5Blb%5D%5Blat%5D=53.92096581520953&
             bounds%5Blb%5D%5Blong%5D=27.53402364917399&
             bounds%5Brt%5D%5Blat%5D=53.946003721943214&
-            bounds%5Brt%5D%5Blong%5D=27.577625638920082&
+            bounds%5Brt%5D%5Blong%5D=27.577625638920082
+    kufar:
+        host: https://api.kufar.by/search-api/v2
+        search: /search/rendered-paginated?cat=1010&cmp=0&cur=USD&gbx=b%3A27.532967117614895%2C53.907066164425416%2C27.58884289581314%2C53.95159075456238&gtsy=country-belarus~province-minsk~locality-minsk&lang=ru&prc=r%3A0%2C700&rms=v.or%3A2%2C3%2C4&rnt=1&size=30&typ=let
 
 telegram:
     bot:

@@ -17,10 +17,11 @@ import java.util.Objects;
 public class Apartment {
 
     @Id
-    private Long id;
+    private String id;
 
     private String url;
 
+    // TODO: remove
     private String photo;
 
     public boolean equals(Object o) {

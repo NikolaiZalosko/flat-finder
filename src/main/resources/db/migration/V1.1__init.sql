@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS apartment
 (
-    id      BIGINT PRIMARY KEY,
+    id      TEXT PRIMARY KEY,
     url     TEXT,
     photo   TEXT
 );
