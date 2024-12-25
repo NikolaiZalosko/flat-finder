@@ -13,16 +13,13 @@ import java.util.Objects;
 @Table(name = "apartment")
 @Getter
 @Setter
-@ToString(exclude = {"photo"})
+@ToString
 public class Apartment {
 
     @Id
     private String id;
 
     private String url;
-
-    // TODO: remove
-    private String photo;
 
     public boolean equals(Object o) {
         if (this == o) {

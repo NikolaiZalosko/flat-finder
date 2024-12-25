@@ -7,7 +7,7 @@ import lombok.Data;
 public class ApartmentKufar {
 
     @JsonProperty("ad_id")
-    private String id;
+    private Long id;
 
     @JsonProperty("ad_link")
     private String url;
