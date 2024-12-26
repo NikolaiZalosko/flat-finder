@@ -23,25 +23,33 @@ management:
 client:
     onliner:
         host: https://r.onliner.by/sdapi/ak.api
-        # TODO: remove folding
-        search: >
-            /search/apartments?
-            rent_type%5B%5D=2_rooms&
-            rent_type%5B%5D=3_rooms&
-            rent_type%5B%5D=4_rooms&
-            rent_type%5B%5D=5_rooms&
-            rent_type%5B%5D=6_rooms&
-            price%5Bmin%5D=200&
-            price%5Bmax%5D=700&
-            currency=usd&
-            only_owner=true&
-            bounds%5Blb%5D%5Blat%5D=53.92096581520953&
-            bounds%5Blb%5D%5Blong%5D=27.53402364917399&
-            bounds%5Brt%5D%5Blat%5D=53.946003721943214&
-            bounds%5Brt%5D%5Blong%5D=27.577625638920082
+        search: "/search/apartments?\
+            rent_type%5B%5D=2_rooms&\
+            rent_type%5B%5D=3_rooms&\
+            rent_type%5B%5D=4_rooms&\
+            rent_type%5B%5D=5_rooms&\
+            rent_type%5B%5D=6_rooms&\
+            price%5Bmin%5D=200&\
+            price%5Bmax%5D=700&\
+            currency=usd&\
+            only_owner=true&\
+            bounds%5Blb%5D%5Blat%5D=53.92096581520953&\
+            bounds%5Blb%5D%5Blong%5D=27.53402364917399&\
+            bounds%5Brt%5D%5Blat%5D=53.946003721943214&\
+            bounds%5Brt%5D%5Blong%5D=27.577625638920082"
     kufar:
         host: https://api.kufar.by/search-api/v2
-        search: /search/rendered-paginated?cat=1010&cmp=0&cur=USD&gbx=b%3A27.53402364917399%2C53.92096581520953%2C27.577625638920082%2C53.946003721943214&gtsy=country-belarus~province-minsk~locality-minsk&lang=ru&prc=r%3A0%2C700&rms=v.or%3A2%2C3%2C4&rnt=1&size=30&typ=let
+        search: "/search/rendered-paginated?cat=1010&\
+            cmp=0&\
+            cur=USD&\
+            gbx=b%3A27.53402364917399%2C53.92096581520953%2C27.577625638920082%2C53.946003721943214&\
+            gtsy=country-belarus~province-minsk~locality-minsk&\
+            lang=ru&\
+            prc=r%3A0%2C700&\
+            rms=v.or%3A2%2C3%2C4&\
+            rnt=1&\
+            size=30&\
+            typ=let"
 
 telegram:
     bot:
